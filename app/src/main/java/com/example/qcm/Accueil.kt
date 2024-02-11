@@ -92,7 +92,7 @@ fun EnsembleBoutonAccueil(
                 },
                 modifier = Modifier.size(48.dp)
             ) {
-                Icon(imageVector = Icons.Default.Delete, contentDescription = null)
+                Icon(imageVector = Icons.Default.Delete, contentDescription = "$theme")
             }
         }
     }

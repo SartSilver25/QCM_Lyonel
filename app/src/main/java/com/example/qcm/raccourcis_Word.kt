@@ -96,28 +96,54 @@ fun raccourcis_Word(navController: NavHostController) {
             } else {
                 if(repChoisie==2) {
                     Text("Bonne réponse !")
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(bottom = 10.dp),
+                        verticalArrangement = Arrangement.Bottom,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Button_nav("Word", "Accueil",onElementClick = {navController.navigate("premierePage")})
+                    }
                 }
                 if (repChoisie==1) {
-                    Text("Movaise réponse !\nCe raccourcis permet d'enregister un fichier")
+                    Text("Mauvaise réponse !\nCe raccourcis permet d'enregister un fichier")
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(bottom = 10.dp),
+                        verticalArrangement = Arrangement.Bottom,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Button_nav("Word", "Retour",onElementClick = {navController.navigate("troisiemePage")})
+                    }
                 }
                 if(repChoisie==3) {
-                    Text("Bonne réponse !\nCe raccourcis permet de couper à la fois du text et des images")
+                    Text("Mauvaise réponse !\nCe raccourcis permet de couper à la fois du text et des images")
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(bottom = 10.dp),
+                        verticalArrangement = Arrangement.Bottom,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Button_nav("Word", "Retour",onElementClick = {navController.navigate("troisiemePage")})
+                    }
                 }
                 if (repChoisie==4) {
-                    Text("Movaise réponse !\nCe raccourcis permet de centrer du text")
+                    Text("Mauvaise réponse !\nCe raccourcis permet de centrer du text")
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(bottom = 10.dp),
+                        verticalArrangement = Arrangement.Bottom,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Button_nav("Word", "Retour",onElementClick = {navController.navigate("troisiemePage")})
+                    }
                 }
             }
         }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(bottom = 10.dp),
-        verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Button("Windows", "Accueil",onElementClick = {navController.navigate("premierePage")})
-    }
 }
 
 @Preview

@@ -96,27 +96,53 @@ fun raccourcis_Windows(navController: NavHostController) {
         } else {
             if(repChoisie==1) {
                 Text("Bonne réponse !")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Windows", "Accueil",onElementClick = {navController.navigate("premierePage")})
+                }
             }
             if (repChoisie==2) {
-                Text("Movaise réponse !\nCe raccourcis ouvre le hub de commentaire")
+                Text("Mauvaise réponse !\nCe raccourcis ouvre le hub de commentaire")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Windows", "Retour",onElementClick = {navController.navigate("deuxiemePage")})
+                }
             }
             if(repChoisie==3) {
-                Text("Bonne réponse !\nCe raccourcis verrouille votre ordinateur")
+                Text("Mauvaise réponse !\nCe raccourcis verrouille votre ordinateur")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Windows", "Retour",onElementClick = {navController.navigate("deuxiemePage")})
+                }
             }
             if (repChoisie==4) {
-                Text("Movaise réponse !\nCe raccourcis ouvre un menu d'émoji/gif/symbol 🤡")
+                Text("Mauvaise réponse !\nCe raccourcis ouvre un menu d'émoji/gif/symbol 🤡")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Windows", "Retour",onElementClick = {navController.navigate("deuxiemePage")})
+                }
             }
         }
-    }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(bottom = 10.dp),
-        verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Button("Windows", "Accueil",onElementClick = {navController.navigate("premierePage")})
     }
 }
 

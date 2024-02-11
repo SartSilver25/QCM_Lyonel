@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Button(
+fun Button_nav(
     theme: String,
     txt_boutton: String,
     onElementClick : (String)->Unit){
@@ -71,55 +71,6 @@ fun Button(
             }
         }
     }
-}
-
-@Composable
-fun ButtonRep(
-    theme: String,
-    txt_boutton: String,
-    onElementClick : (String)->Unit){
-    var boutonsVisibles by remember { mutableStateOf(true) }
-
-        if (boutonsVisibles) {
-            androidx.compose.material3.Button(
-                onClick = { onElementClick(theme) },
-                modifier = Modifier
-                    .padding(0.dp)
-                    .height(200.dp)
-                    .width(175.dp)
-            ) {
-                Text(text = txt_boutton)
-            }
-        }
-}
-
-@Composable
-fun Reponse(val1: String, val2: String, val3: String, val4: String): Int {
-    val reponse = remember { mutableStateOf(0) }
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Row(modifier = Modifier
-            .fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center) {
-            ButtonRep(val1 , val1) {
-                reponse.value = 1
-            }
-            ButtonRep(val2 , val2) {
-                reponse.value = 2
-            }
-        }
-
-        Row(modifier = Modifier
-            .fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center) {
-            ButtonRep(val3 , val3) {
-                reponse.value = 3
-            }
-            ButtonRep(val4 , val4) {
-                reponse.value = 4
-            }
-        }
-    }
-    return reponse.value
 }
 
 data class Response(val text: String, val id: Int)

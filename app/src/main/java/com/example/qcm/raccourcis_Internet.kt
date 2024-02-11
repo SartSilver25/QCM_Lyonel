@@ -96,27 +96,53 @@ fun raccourcis_Internet(navController: NavHostController) {
         } else {
             if(repChoisie==1) {
                 Text("Bonne réponse !")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Internet", "Accueil",onElementClick = {navController.navigate("premierePage")})
+                }
             }
             if (repChoisie==2) {
                 Text("Movaise réponse !\nCe raccourcis ouvre une page d'impression")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Internet", "Retour",onElementClick = {navController.navigate("quatriemePage")})
+                }
             }
             if(repChoisie==3) {
-                Text("Bonne réponse !\nCe raccourcis ferme l'onglet actif")
+                Text("Mauvaise réponse !\nCe raccourcis ferme l'onglet actif")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Internet", "Retour",onElementClick = {navController.navigate("quatriemePage")})
+                }
             }
             if (repChoisie==4) {
                 Text("Movaise réponse !\nCe raccourcis kill le programme actif")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.Bottom,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button_nav("Internet", "Retour",onElementClick = {navController.navigate("quatriemePage")})
+                }
             }
         }
-    }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(bottom = 10.dp),
-        verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Button("Internet", "Accueil",onElementClick = {navController.navigate("premierePage")})
     }
 }
 

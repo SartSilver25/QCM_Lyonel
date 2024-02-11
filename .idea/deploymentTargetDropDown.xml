@@ -2,7 +2,22 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="QCM_Test">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="testQCMInternet()">
+        <State />
+      </entry>
+      <entry key="testQCMWindows()">
+        <State />
+      </entry>
+      <entry key="testQCMWindows() (1)">
+        <State />
+      </entry>
+      <entry key="testQCMWord()">
         <State />
       </entry>
     </value>

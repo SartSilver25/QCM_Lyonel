@@ -17,7 +17,6 @@ fun navigation(){
         composable("deuxiemePage") { raccourcis_Windows(navController) }
         composable("troisiemePage") { raccourcis_Word(navController) }
         composable("quatriemePage") { raccourcis_Internet(navController) }
-        composable("cinquiemePage") { Bonne_rep(navController) }
     }
 
 }
